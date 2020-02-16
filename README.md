@@ -104,3 +104,17 @@ In case you have any questions in regards to the task feel free to reach out to
 us.
 
 [1]: https://substrate.dev/docs/en/overview/low-level-data-format#compact-general-integers
+
+##### ToDo
+- Namespace
+- Service
+- Deployment
+
+Notes
+
+kubectl apply -f deployment/Deployment.yml
+kubectl describe deployment substrate-deployment
+kubectl get pods -l app=substrate
+
+kubectl create -f deployment/Service.yml 
+kubectl get svc

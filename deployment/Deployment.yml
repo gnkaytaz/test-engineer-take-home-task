@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: substrate-deployment
+spec:
+  selector:
+    matchLabels:
+      app: substrate
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: substrate
+    spec:
+      containers:
+        - name: substrate
+          image: parity/substrate:2.0.0-31c633c47
+          ports:
+            - containerPort: 9933
